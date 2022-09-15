@@ -1,0 +1,24 @@
+
+.nav{
+    grid-area: nav;
+    background-color: rgb(18, 9, 22);
+    padding: 25px;
+  }
+  .item a {
+    color: white;
+    text-decoration: none;
+    
+  }
+
+  .item a.activelink {
+    color: gold;
+
+  }
+  .item{
+    color: blue
+  }
+
+  .siteBarMenu{
+    padding-top: 20px;
+    color: green;
+  }

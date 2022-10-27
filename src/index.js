@@ -1,12 +1,39 @@
-
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {addPost} from './redux/state'
-import state from './redux/state';
+import store from './redux/redux-store';
 import { BrowserRouter } from 'react-router-dom';
-import { rerenderEntireTree } from './render';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { Provider } from 'react-redux';
 
-rerenderEntireTree(state);
+
+
+
+
+
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+    root.render(
+        <BrowserRouter>
+            <React.StrictMode>
+                <Provider store={store}>
+                    <App  />
+                </Provider>
+            </React.StrictMode>
+        </BrowserRouter>
+    );
+
+
+
+
+
+
+
 
 
 

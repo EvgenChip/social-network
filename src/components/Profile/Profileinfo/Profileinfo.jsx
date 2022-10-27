@@ -1,13 +1,25 @@
 import React from 'react';
+import { Navigate } from 'react-router-dom'
+import Preloader from '../../common/Preloader'
 import s from './Profileinfo.module.css'
+import ProfileStatus from './ProfileStatus'
 
-const Profileinfo = () => {
+const Profileinfo = (props) => {
+
+    if (props.profile == null || props.profile == undefined) {
+
+        return <Preloader />
+    }
+
+
     return (
         <div >
             <div>
-                <img src='https://tripplanet.ru/wp-content/uploads/europe/turkey/istanbul/stambul-dostoprimechatelnosti.jpg' /></div>
+            </div>
             <div className={s.discriptionBlock}>
-                ava + discription
+                <img src={props.profile.photos.lage} />
+
+                <ProfileStatus status={'Hello mahaloo'} />
             </div>
         </div>
     )
